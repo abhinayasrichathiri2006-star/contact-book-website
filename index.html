@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h1>Contact Book</h1>
+
+        <form id="contact-form">
+          <input type="hidden" id="contact-id" />
+
+          <label>
+            Full Name
+            <input type="text" id="name" placeholder="John Doe" required />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" id="phone" placeholder="+1 234 567 890" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" placeholder="john@example.com" />
+          </label>
+
+          <label>
+            Category
+            <select id="group">
+              <option value="Family">Family</option>
+              <option value="Friends">Friends</option>
+              <option value="Work">Work</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <div class="buttons">
+            <button type="submit" class="primary">Save Contact</button>
+            <button type="button" id="reset-btn" class="secondary">Clear</button>
+          </div>
+        </form>
+      </aside>
+
+      <main class="main-panel">
+        <div class="toolbar">
+          <input
+            type="search"
+            id="search"
+            placeholder="Search contacts..."
+            aria-label="Search contacts"
+          />
+          <span id="count">0 contacts</span>
+        </div>
+
+        <div id="contact-list" class="contact-list"></div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
